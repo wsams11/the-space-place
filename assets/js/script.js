@@ -2,7 +2,7 @@ const astronomyList = {
   'stars': ['Class O', 'Class B', 'Class A', 'Class F', 'Class G', 'Class K', 'Class M'],
   'galaxies': ['Elliptical', 'Spiral', 'Lenticular'],
   'solar system': ['Sun', 'Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune'],
-  'nebulae': ['H II regions', 'Planetary nebula', 'Supernova remnant', 'Dark nebula']
+  'nebulae': ['H II regions', 'Planetary nebula', 'Supernova remnant', 'Dark nebula'],
 };
 
 for (item in astronomyList) {
