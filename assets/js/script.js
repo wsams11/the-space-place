@@ -18,7 +18,7 @@ for (item in astronomyList) {
 }
 
 $('#astronomyList').on('click', 'li, h3', function () {
-    
+
  displayInfo($(this).text());
 });
 
