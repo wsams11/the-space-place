@@ -8,7 +8,7 @@ const astronomyList = {
     "Class K",
     "Class M"
   ],
-  galaxies: ["Elliptical", "Spiral", "Lenticular"],
+  galaxy: ["Elliptical", "Spiral", "Lenticular"],
   "solar system": [
     "Sun",
     "Mercury",
@@ -20,7 +20,7 @@ const astronomyList = {
     "Uranus",
     "Neptune"
   ],
-  nebulae: [
+  nebula: [
     "H II regions",
     "Planetary nebula",
     "Supernova remnant",
@@ -29,11 +29,19 @@ const astronomyList = {
 };
 for (item in astronomyList) {
   $("#astronomyList").append(
-    $("<h3>").text(item[0].toUpperCase() + item.slice(1).toLowerCase())
+    $("<p>")
+      .addClass("menu-label")
+      .text(item[0].toUpperCase() + item.slice(1).toLowerCase())
   );
+
   astronomyList[item].forEach(function(type) {
     $("<ul>")
-      .append($("<li>").text(type))
+      .addClass("menu-list")
+      .append(
+        $("<li>")
+          .append($("<a>"))
+          .text(type)
+      )
       .appendTo("#astronomyList");
   });
 }

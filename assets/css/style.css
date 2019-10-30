@@ -11,7 +11,6 @@
 
   }
   .tile .box{
-    /* opacity: 0.5; */
     background-color: rgba(0, 0, 0, .5);
     color: white;
   }
@@ -25,9 +24,8 @@
   }
  body{
   font-family: 'Comfortaa', cursive;
-/* font-family: 'Roboto', sans-serif; */
-/* font-family: 'Noto Sans', sans-serif; */
-/* font-family: 'Muli', sans-serif; */
-/* font-family: 'Quicksand', sans-serif; */
 font-size: 18px;
+ }
+ #astronomyList li,h3{
+  cursor: pointer;
  }
