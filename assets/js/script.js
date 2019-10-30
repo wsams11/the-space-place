@@ -27,6 +27,7 @@ const astronomyList = {
     "Dark nebula"
   ]
 };
+
 for (item in astronomyList) {
   $("#astronomyList").append(
     $("<p>")
@@ -55,17 +56,20 @@ function displayInfo(string) {
   let params = $.param({
     q: string
   });
+
   $.ajax({
     url: "https://images-api.nasa.gov/search?" + params,
     method: "GET"
   }).then(function(response) {
     $("#nasa").empty();
+
     for (let i = 0; i < 6; i++) {
+
       let imageObj = response.collection.items[i];
-      console.log(response);
       let title = imageObj.data[0].title;
       let description = imageObj.data[0].description;
       let image = imageObj.links[0].href;
+
       $("<div>")
         .addClass("card")
         .append($("card-image"))
@@ -73,6 +77,7 @@ function displayInfo(string) {
         .appendTo($("#nasa"));
     }
   });
+
   let wikiParams = $.param({
     action: "query",
     prop: "extracts",
@@ -82,6 +87,7 @@ function displayInfo(string) {
     titles: string,
     origin: "*"
   });
+
   $.ajax({
     url: "https://en.wikipedia.org/w/api.php?" + wikiParams,
     method: "GET"
