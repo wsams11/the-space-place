@@ -27,6 +27,7 @@ const astronomyList = {
     "Dark nebula"
   ]
 };
+
 for (item in astronomyList) {
   $("#astronomyList").append(
     $("<p>")
@@ -34,9 +35,10 @@ for (item in astronomyList) {
       .text(item[0].toUpperCase() + item.slice(1).toLowerCase())
   );
 
+  let category = $("<ul>").addClass("menu-list");
+
   astronomyList[item].forEach(function(type) {
-    $("<ul>")
-      .addClass("menu-list")
+    category
       .append(
         $("<li>")
           .append($("<a>"))
@@ -46,25 +48,39 @@ for (item in astronomyList) {
   });
 }
 
-$('#astronomyList').on('click', 'li, h3', function () {
+$("#astronomyList").on("click", "li, p", function() {
+  let searchTerm = $(this).text();
 
- displayInfo($(this).text());
+  searchTerm +=
+    " " +
+    $(this)
+      .parent()
+      .prev()
+      .text();
+
+  console.log(searchTerm);
+
+  displayInfo(searchTerm);
 });
+
 function displayInfo(string) {
   let params = $.param({
     q: string
   });
+
   $.ajax({
     url: "https://images-api.nasa.gov/search?" + params,
     method: "GET"
   }).then(function(response) {
     $("#nasa").empty();
+
     for (let i = 0; i < 6; i++) {
       let imageObj = response.collection.items[i];
       console.log(response);
       let title = imageObj.data[0].title;
       let description = imageObj.data[0].description;
       let image = imageObj.links[0].href;
+
       $("<div>")
         .addClass("card")
         .append($("card-image"))
@@ -72,6 +88,7 @@ function displayInfo(string) {
         .appendTo($("#nasa"));
     }
   });
+
   let wikiParams = $.param({
     action: "query",
     prop: "extracts",
@@ -81,10 +98,14 @@ function displayInfo(string) {
     titles: string,
     origin: "*"
   });
+
   $.ajax({
     url: "https://en.wikipedia.org/w/api.php?" + wikiParams,
     method: "GET"
   }).then(function(response) {
-    console.log(response);
+    console.log("wiki", response);
+    console.log("wiki", string);
+    let page = Object.keys(response.query.pages)[0];
+    console.log("wiki", response);
   });
 }
