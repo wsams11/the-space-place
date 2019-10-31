@@ -20,11 +20,35 @@ const astronomyList = {
     "Uranus",
     "Neptune"
   ],
-  nebula: [
-    "H II regions",
-    "Planetary nebula",
-    "Supernova remnant",
-    "Dark nebula"
+  Nebulae: [
+    "Barnard's Loop",
+    "Boomerang Nebula",
+    "NGC 7635",
+    "California Nebula",
+    "Carina Nebula",
+    "Cave Nebula",
+    "Cone Nebula",
+    "Crescent Nebula",
+    "Double Helix Nebula",
+    "Eagle Nebula",
+    "Elephant's Trunk Nebula",
+    "Carina Nebula",
+    "Flame Nebula",
+    "Gum Nebula",
+    "Heart Nebula",
+    "Homunculus Nebula",
+    "Horsehead Nebula",
+    "Lagoon Nebula",
+    "North America Nebula",
+    "Omega Nebula",
+    "Orion Nebula",
+    "Pistol Nebula",
+    "Rosette Nebula",
+    "Running Chicken Nebula",
+    "Soul Nebula",
+    "Tarantula Nebula",
+    "Trifid Nebula",
+    "Witch Head Nebula"
   ]
 };
 
@@ -32,7 +56,7 @@ for (item in astronomyList) {
   $("#astronomyList").append(
     $("<p>")
       .addClass("menu-label")
-      .text(item[0].toUpperCase() + item.slice(1).toLowerCase())
+      .text(item)
   );
 
   let category = $("<ul>").addClass("menu-list");
@@ -48,15 +72,8 @@ for (item in astronomyList) {
   });
 }
 
-$("#astronomyList").on("click", "li, p", function() {
+$("#astronomyList").on("click", "li", function() {
   let searchTerm = $(this).text();
-
-  searchTerm +=
-    " " +
-    $(this)
-      .parent()
-      .prev()
-      .text();
 
   console.log(searchTerm);
 
@@ -74,7 +91,7 @@ function displayInfo(string) {
   }).then(function(response) {
     $("#nasa").empty();
 
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 20; i++) {
       let imageObj = response.collection.items[i];
       console.log(response);
       let title = imageObj.data[0].title;
@@ -106,6 +123,26 @@ function displayInfo(string) {
     console.log("wiki", response);
     console.log("wiki", string);
     let page = Object.keys(response.query.pages)[0];
-    console.log("wiki", response);
+    let extract = response.query.pages[page].extract;
+
+    console.log(extract);
+    $("#testWiki").empty();
+    $("#testWiki").append(
+      $("<h2>")
+        .addClass("title")
+        .text(string),
+      $("<p>").text(trimExtract(extract))
+    );
   });
+}
+
+function trimExtract(extract) {
+  return extract.split(" ").length > 200
+    ? extract
+        .trim()
+        .split(" ")
+        .filter((word, index) => index <= 200)
+        .join(" ")
+        .concat("...")
+    : extract;
 }
