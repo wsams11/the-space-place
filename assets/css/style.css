@@ -38,6 +38,7 @@ h3 {
  
  .grid-item {
    float: left;
+   margin-bottom: 7px;
  }
  
  .grid-item img {
