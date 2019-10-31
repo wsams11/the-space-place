@@ -1,31 +1,51 @@
-.footer {
-    width: 100%;
-    background-color: black;
-    color: white;
-    text-align: center;
-  }
-  
-  .tile{
-      margin-top: 10px;
-    margin-bottom: 10px;
 
-  }
-  .tile .box{
-    background-color: rgba(0, 0, 0, .5);
-    color: white;
-  }
-  .heroTitle{
-    color: white;
-    font-size: 50px;
-  }
-  .title{
-    color: white;
-    font-size: 24px;
-  }
- body{
-  font-family: 'Comfortaa', cursive;
-font-size: 18px;
- }
- #astronomyList li,h3{
+.footer {
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+.tile {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.tile .box {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+.heroTitle {
+  color: white;
+  font-size: 50px;
+}
+.title {
+  color: white;
+  font-size: 24px;
+}
+body {
+  font-family: "Comfortaa", cursive;
+  font-size: 18px;
+}
+#astronomyList li,
+h3 {
   cursor: pointer;
+}
+
+ .grid-sizer,
+ .grid-item {
+   width: 33.333%;
+ }
+ 
+ .grid-item {
+   float: left;
+ }
+ 
+ .grid-item img {
+   display: block;
+   width: 100%;
+ }
+ .grid:after {
+   content: '';
+   display: block;
+   clear: both;
  }
