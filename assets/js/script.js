@@ -37,7 +37,7 @@ for (item in astronomyList) {
 
   let category = $("<ul>").addClass("menu-list");
 
-  astronomyList[item].forEach(function(type) {
+  astronomyList[item].forEach(function (type) {
     category
       .append(
         $("<li>")
@@ -48,7 +48,7 @@ for (item in astronomyList) {
   });
 }
 
-$("#astronomyList").on("click", "li, p", function() {
+$("#astronomyList").on("click", "li, p", function () {
   let searchTerm = $(this).text();
 
   searchTerm +=
@@ -71,7 +71,7 @@ function displayInfo(string) {
   $.ajax({
     url: "https://images-api.nasa.gov/search?" + params,
     method: "GET"
-  }).then(function(response) {
+  }).then(function (response) {
     $("#nasa").empty();
 
     for (let i = 0; i < 6; i++) {
@@ -82,12 +82,17 @@ function displayInfo(string) {
       let image = imageObj.links[0].href;
 
       $("<div>")
-        .addClass("card")
-        .append($("card-image"))
+        .addClass("grid-item")
         .append($("<img>").attr("src", image))
         .appendTo($("#nasa"));
     }
+    $('.grid').masonry({
+      // options
+      itemSelector: '.grid-item',
+      columnWidth: 200
+    });
   });
+
 
   let wikiParams = $.param({
     action: "query",
@@ -102,7 +107,7 @@ function displayInfo(string) {
   $.ajax({
     url: "https://en.wikipedia.org/w/api.php?" + wikiParams,
     method: "GET"
-  }).then(function(response) {
+  }).then(function (response) {
     console.log("wiki", response);
     console.log("wiki", string);
     let page = Object.keys(response.query.pages)[0];
