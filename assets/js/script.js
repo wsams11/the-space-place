@@ -21,17 +21,13 @@ const astronomyList = {
         "Neptune"
     ],
     Nebulae: [
-        "Barnard's Loop",
         "Boomerang Nebula",
         "NGC 7635",
         "California Nebula",
         "Carina Nebula",
-        "Cave Nebula",
         "Cone Nebula",
         "Crescent Nebula",
-        "Double Helix Nebula",
         "Eagle Nebula",
-        "Elephant's Trunk Nebula",
         "Carina Nebula",
         "Flame Nebula",
         "Gum Nebula",
@@ -44,13 +40,12 @@ const astronomyList = {
         "Orion Nebula",
         "Pistol Nebula",
         "Rosette Nebula",
-        "Running Chicken Nebula",
-        "Soul Nebula",
         "Tarantula Nebula",
         "Trifid Nebula",
-        "Witch Head Nebula"
     ]
 };
+
+let nasaDescrip;
 
 for (item in astronomyList) {
     $("#astronomyList").append(
@@ -89,17 +84,32 @@ function displayInfo(string) {
         url: "https://images-api.nasa.gov/search?" + params,
         method: "GET"
     }).then(function (response) {
-        //$("#nasa").empty();
 
-        for (let i = 0; i < 20; i++) {
+        $("#nasa")
+            .empty()
+            .append(
+                $("<div>")
+                    .addClass("modal")
+                    .append(
+                        $("<div>")
+                            .addClass("modal-background"),
+                        $("<div>")
+                            .addClass("modal-content")
+                            .attr("id", "nasaImg"),
+                        $("<button>")
+                            .addClass("modal-close is-large")
+                    )
+            );
+
+        for (let i = 0; i < 10; i++) {
             let imageObj = response.collection.items[i];
             console.log(response);
             let title = imageObj.data[0].title;
-            let description = imageObj.data[0].description;
+            nasaDescrip = imageObj.data[0].description;
             let image = imageObj.links[0].href;
 
             $("<div>")
-                .addClass("grid-item")
+                .addClass("grid-sizer grid-item")
                 .append($("<img>").attr("src", image))
                 .appendTo($("#nasa"));
         }
@@ -152,3 +162,23 @@ function trimExtract(extract) {
             .concat("...")
         : extract;
 }
+
+$("#nasa").on("click", "img", function () {
+
+    let imgSrc = $(this).attr("src");
+    
+    $("#nasaImg").empty();
+
+    $(".modal").addClass("is-active");
+        
+    $("#nasaImg").append($("<img>").attr("src", imgSrc));
+
+    $(".modal-close, .modal-background").on("click", function() {
+    
+        $(".modal").removeClass("is-active");
+
+    })
+
+});
+
+
