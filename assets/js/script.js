@@ -99,11 +99,15 @@ function displayInfo(string) {
       let image = imageObj.links[0].href;
 
       $("<div>")
-        .addClass("card")
-        .append($("card-image"))
+        .addClass("grid-item")
         .append($("<img>").attr("src", image))
         .appendTo($("#nasa"));
     }
+    $(".grid").masonry({
+      // options
+      itemSelector: ".grid-item",
+      columnWidth: 200
+    });
   });
 
   let wikiParams = $.param({

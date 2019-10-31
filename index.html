@@ -1,66 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>The Space Place</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Muli|Noto+Sans|Quicksand|Roboto&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Comfortaa|Muli|Noto+Sans|Quicksand|Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-</head>
-
-<body background="assets/images/Webp.net-resizeimage.jpg">
+  <body background="assets/images/Webp.net-resizeimage.jpg">
     <section class="hero has-text-centered">
-        <div class="hero-body">
-            <div class="container">
-                <p class="heroTitle">
-                    The Space Place
-                </p>
-                </h2>
-            </div>
+      <div class="hero-body">
+        <div class="container">
+          <p class="heroTitle">
+            The Space Place
+          </p>
         </div>
+      </div>
     </section>
 
     <div class="container">
-
-        <div class="tile is-ancestor">
-            <div class="tile is-parent">
-                <div class="tile is-child box">
-            <aside class="menu" id="astronomyList">
-            </aside>
-
-                </div>
+      <div class="tile is-ancestor">
+        <div class="tile is-parent">
+          <div class="tile is-child box">
+            <aside class="menu" id="astronomyList"></aside>
+          </div>
         </div>
-            <div class="tile is-10 is-vertical is-parent" id="wiki">
-                <div class="tile is-child box">
-                </div>
-                <div class="tile is-child box" id="nasa">
-                    <p class="title">NASA</p>
-                </div>
+        <div class="tile is-10 is-vertical is-parent" id="wiki">
+          <div class="tile is-child box">
+            <p class="title">Wiki</p>
+            <div class="grid"></div>
+          </div>
+          <div class="tile is-child box">
+            <p class="title">NASA</p>
+            <div class="grid" id="nasa">
+              <div class="grid-sizer"></div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
 
-
     <footer class="footer">
-        <div class="content has-text-centered">
-            <p>
-                THE SPACE PLACE is created by Derek Stoeockmann, Jacob Lara, William Sams, and Kondali Kangha.
-            </p>
-        </div>
+      <div class="content has-text-centered">
+        <p>
+          THE SPACE PLACE is created by Derek Stoeockmann, Jacob Lara, William
+          Sams, and Kondali Kangha.
+        </p>
+      </div>
     </footer>
 
-
-
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+    ></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
     <script src="assets/js/script.js"></script>
-    
-</body>
-
+  </body>
 </html>
