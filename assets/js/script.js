@@ -89,9 +89,9 @@ function displayInfo(string) {
         url: "https://images-api.nasa.gov/search?" + params,
         method: "GET"
     }).then(function (response) {
-        //$("#nasa").empty();
+        $("#nasa").empty();
 
-        for (let i = 0; i < 20; i++) {
+        for (let i = 0; i < 10; i++) {
             let imageObj = response.collection.items[i];
             console.log(response);
             let title = imageObj.data[0].title;
