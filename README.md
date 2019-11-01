@@ -42,16 +42,16 @@ Astronomy, as it sounds interesting, is a very delicated field that needs alot o
 
  * [Wikipedia API](https://www.mediawiki.org/wiki/API:Main_page)
 
- ## website create by
+ ## website created by
 
 
- William Sams
+ * William Sams
 
-Derek Stoeockmann
+ * Derek Stoeockmann
 
-Jacob Lara
+ * Jacob Lara
 
-kondali Kangha
+ * kondali Kangha
 
 
 
