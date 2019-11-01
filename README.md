@@ -1,12 +1,10 @@
 # Table of Content
 
 * [Description](#Description)
-* [User Story](#User Story)
-* [Educational Context](#Educational Context)
-* [Key Directions](#Key Directions)
-* [Helpfull Link](#Helpfull link)
-
-
+* [User Story](#User)
+* [Educational Context](#Educational)
+* [Key Directions](#Key)
+* [Helpfull Link](#Helpfull)
 
 # The Space Place
 
