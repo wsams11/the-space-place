@@ -42,6 +42,16 @@ Astronomy, as it sounds interesting, is a very delicated field that needs alot o
 
  * [Wikipedia API](https://www.mediawiki.org/wiki/API:Main_page)
 
+ ## Usage
+
+* [Jupiter Wiki](assets/images/1)     
+* [Jupiter NASA](assets/images/2) 
+* [Horsehead Nebula Wiki](assets/images/3)      
+* [Horsehead Nebula NASA](assets/images/4)
+
+
+
+
  ## website created by
 
 
