@@ -1,34 +1,64 @@
-# the-space-place
-Project title - THE SPACE PLACE
+# Table of Content
 
-project description - user will be able to select from different astronomical phenomena to display images and NASA / WIKI information
+* [Description](#Description)
+* [User Story](#User Story)
+* [Educational Context](#Educational Context)
+* [Key Directions](#Key Directions)
+* [Helpfull Link](#Helpfull link)
 
-user story - 
 
-AS A - Space fan
 
-I WANT - to find images and info about astronomical phenomena
+# The Space Place
 
-SO THAT - I can be knowledgable about space
+## Description
 
-GIVEN - given a choice between different astronomical phenomena
+We created an app that displays a list of astronomical objects that allows users to do an image search and use wikipedia for a description of what the object means. The idea of using wikipedia is to have the users have more infos about the images we use.
 
-WHEN - I click on an astronomical phenomenon of my choosing
+## User Story
 
-THEN - I expect to see images and educational information
+AS A Space researcher
 
-wireframe -
+I WANT to obtain some informations about the beauty of astromical objects and images
 
-[](https://www.notion.so/a757b362011948ed8ee663de6958baa2#e7ed58db86b843d187a42c41fad9e395)
+SO THAT I can understand, be educated, learn to strive for success and fall in love with astronomy
 
-API's to be used - NASA image library and wikipedia API 
+## Educational context
 
-rough breakdown of task - 
+Astronomy, as it sounds interesting, is a very delicated field that needs alot of research and time to study. The space place allows researchers to understand and learn more about astronomical phenomena
 
-William - start with bulma 
+## Key Directions
 
-Derek - start with astronomical phenomena that we will discuss 
+ * Bulma
+ * Masonry
+ * Jquery
+ * Wikipedia API
+ * Nasa image API
 
-jacob - start with helping with javascript
+ ## Helpfull link
 
-kondali - start with bulma
+ * [Bulma](https://bulma.io)
+
+ * [Mansonry](https://masonry.desandro.com)
+
+ * [Nasa image API](https://api.nasa.gov)
+
+ * [Wikipedia API](https://www.mediawiki.org/wiki/API:Main_page)
+
+ ## website create by
+
+
+ William Sams
+
+Derek Stoeockmann
+
+Jacob Lara
+
+kondali Kangha
+
+
+
+
+
+
+
+
