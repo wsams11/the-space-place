@@ -24,7 +24,7 @@
 }
 body {
   font-family: "Comfortaa", cursive;
-  font-size: 18px;
+  font-size: 14px;
 }
 #astronomyList li,
 h3 {
@@ -50,3 +50,10 @@ h3 {
    display: block;
    clear: both;
  }
+ #nasa img{
+  cursor: pointer;
+ }
+ .menu-label{
+   color:#dddccc;
+ }
+ 
