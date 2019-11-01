@@ -1,10 +1,10 @@
 # Table of Content
 
-* [Description](#Description)
-* [User-Story](#User-Story)
-* [Educational-Context](#Educational-context)
-* [Key-Directions](#Key-Directions)
-* [Helpfull-Link](#Helpfull-link)
+- [Description](#Description)
+- [User-Story](#User-Story)
+- [Educational-Context](#Educational-context)
+- [Key-Directions](#Key-Directions)
+- [Helpfull-Link](#Helpfull-link)
 
 # The Space Place
 
@@ -26,47 +26,35 @@ Astronomy, as it sounds interesting, is a very delicated field that needs alot o
 
 ## Key-Directions
 
- * Bulma
- * Masonry
- * Jquery
- * Wikipedia API
- * Nasa image API
+- Bulma
+- Masonry
+- Jquery
+- Wikipedia API
+- Nasa image API
 
- ## Helpfull-link
+## Helpfull-link
 
- * [Bulma](https://bulma.io)
+- [Bulma](https://bulma.io)
 
- * [Mansonry](https://masonry.desandro.com)
+- [Mansonry](https://masonry.desandro.com)
 
- * [Nasa image API](https://api.nasa.gov)
+- [Nasa image API](https://api.nasa.gov)
 
- * [Wikipedia API](https://www.mediawiki.org/wiki/API:Main_page)
+- [Wikipedia API](https://www.mediawiki.org/wiki/API:Main_page)
 
- ## Usage
+## Usage
 
-* [Jupiter Wiki](assets/images/1)     
-* [Jupiter NASA](assets/images/2) 
-* [Horsehead Nebula Wiki](assets/images/3)      
-* [Horsehead Nebula NASA](assets/images/4)
+- [Jupiter Wiki](assets/images/1)
+- [Jupiter NASA](assets/images/2)
+- [Horsehead Nebula Wiki](assets/images/3)
+- [Horsehead Nebula NASA](assets/images/4)
 
+## website created by
 
+- William Sams
 
+- Derek Stoeckmann
 
- ## website created by
+- Jacob Lara
 
-
- * William Sams
-
- * Derek Stoeockmann
-
- * Jacob Lara
-
- * kondali Kangha
-
-
-
-
-
-
-
-
+- Kondali Kangha
