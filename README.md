@@ -1,10 +1,10 @@
 # Table of Content
 
 * [Description](#Description)
-* [User Story](#User)
-* [Educational Context](#Educational)
-* [Key Directions](#Key)
-* [Helpfull Link](#Helpfull)
+* [User Story](#User-Story)
+* [Educational Context](#Educational-context)
+* [Key Directions](#Key-Directions)
+* [Helpfull Link](#Helpfull-link)
 
 # The Space Place
 
@@ -12,7 +12,7 @@
 
 We created an app that displays a list of astronomical objects that allows users to do an image search and use wikipedia for a description of what the object means. The idea of using wikipedia is to have the users have more infos about the images we use.
 
-## User Story
+## User-Story
 
 AS A Space researcher
 
@@ -20,11 +20,11 @@ I WANT to obtain some informations about the beauty of astromical objects and im
 
 SO THAT I can understand, be educated, learn to strive for success and fall in love with astronomy
 
-## Educational context
+## Educational-context
 
 Astronomy, as it sounds interesting, is a very delicated field that needs alot of research and time to study. The space place allows researchers to understand and learn more about astronomical phenomena
 
-## Key Directions
+## Key-Directions
 
  * Bulma
  * Masonry
@@ -32,7 +32,7 @@ Astronomy, as it sounds interesting, is a very delicated field that needs alot o
  * Wikipedia API
  * Nasa image API
 
- ## Helpfull link
+ ## Helpfull-link
 
  * [Bulma](https://bulma.io)
 
